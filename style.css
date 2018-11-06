@@ -1,0 +1,171 @@
+html {
+	background-color: black;
+	color: white;
+}
+
+body { margin: 0; }
+
+.lv-1 {	background-color: deepskyblue; }
+.lv-2 { background-color: royalblue;	 }
+.lv-3 { background-color: blue;				 }
+.lv-4 { background-color: darkcyan;		 }
+.lv-5 { background-color: olivedrab;	 }
+.lv-6 { background-color: green;			 }
+
+
+.pot-link								{	background-color: gray;	color: aqua; }
+.pot-link:not([href])		{	color: yellow; }
+.marca 									{ background-color: yellow; color: black; font-weight: bold; }
+.marca[title] 					{ text-decoration: underline dotted; cursor: help; }
+.marca-crit							{ background-color: red; color: white; font-weight: bold; }
+.marca-crit[title]			{ text-decoration: underline dotted; cursor: help; }
+.mart										{ background-color: gray; font-weight: bold; text-decoration: underline; }
+.revog									{ background-color: red; font-weight: bold; }
+.revog[title]						{ text-decoration: underline dotted; cursor: help; }
+.revog + .expl					{ display: none;	}
+.revog:hover + .expl		{ display: block; }
+.apostila							{ background-color: white; color: black; font-weight: bold; text-decoration: underline dotted; cursor: help; }
+.apostila + .expl				{ display: none; background-color: white; color: black; }
+.apostila:hover + .expl	{ display: block; }
+
+dl dl	 { margin: 5px 0;      }
+dt, dd { margin-bottom: 5px; }
+.comprimido ~ dd, .comprimido dt, .comprimido dd { margin-bottom: 0; }
+
+/* minimal-table.css (class="standard-table") */
+
+.standard-table {
+	font-family: serif;
+	color: black;
+  border-collapse: collapse;
+  border: 2px solid rgb(200,200,200);
+  /* letter-spacing: 1px; */
+  /* font-size: 0.8rem; */
+	background-color: white;
+}
+
+.standard-table td, .standard-table th {
+  border: 1px solid rgb(190,190,190);
+  padding: 10px 20px;
+}
+
+.standard-table th {
+  background-color: rgb(235,235,235);
+	text-align: center;
+}
+
+.standard-table td {
+  text-align: center;
+}
+
+.standard-table tr:nth-child(even) td {
+  background-color: rgb(250,250,250);
+}
+
+.standard-table tr:nth-child(odd) td {
+  background-color: rgb(245,245,245);
+}
+
+.standard-table caption {
+  padding: 10px;
+	color: white;
+}
+
+#anexo { width: 100%; margin: 10px 0; }
+#anexo td[rowspan] + td, #anexo tr td:nth-child(1):not([rowspan]) {	text-align: left; }
+#anexo td, #anexo th { padding: 0; }
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+	color: white;
+	cursor: pointer;
+	padding-left: 10px;
+	width: 100%;
+	text-align: left;
+	border: 1px solid white;
+	outline: none;
+	transition: 0.4s;
+	/* My code */
+	font-family: serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+	display: flex;
+	align-items: center;
+}
+
+.accordion:before {
+	content: "+" ; /* Unicode character for "plus" sign (+) '\02795' */
+	margin-right: 10px;
+	width: 20px;
+	text-align: center;
+}
+
+.active:before {
+	content: "-"; /* Unicode character for "minus" sign (-) "\2796" */
+}
+
+/* Botões usados para conter artigos sem containers específicos */
+.accordion.art-cont-but {
+	width: auto;
+	border-radius: 5px;
+	background-color: red;
+}
+
+/* Botões para seções introdutórias */
+.accordion.intro-but {
+	width: auto;
+	border-radius: 5px;
+	background-color: gray;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+	padding-left: 10px;
+	display: block;
+	overflow: hidden;
+	border: 1px solid white;
+}
+
+/* Paineis de artigos */
+.artigo, .questoes { display: block; }
+
+/* Botões de explicação */
+.expl-but {
+	cursor: pointer;
+	width: 40px;
+}
+
+.expl-but::before {
+	text-align: center;
+	content: "\02795";
+}
+
+.expl-active::before {
+	content: "\2796";
+}
+
+/* Paineis de explicação */
+.expl {
+	padding-left: 10px;
+	display: block;
+	overflow: hidden;
+	background-color: rgb(50,50,50);
+}
+
+/* Anotações pessoais */
+.note					{ background-color: rgb(100,100,255); }
+.note + .expl { background-color: rgb(50,50,100);		}
+
+/* Questões */ /*
+.expl					 { display: none;	 }
+.panel				 { display: none;  }
+.artigo				 { display: none;  }
+.lv-1 + .panel { display: block; }
+.questoes			 { display: block; } */
+
+/* Respostas de questões */
+.resp					{ background-color: rgb(100,100,255);												}
+.resp + .expl { background-color: rgb(50,50,100); display: none;					}
+.copia				{ background-color: gray; font-style: italic; padding: 5px; }
+
+
